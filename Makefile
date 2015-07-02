@@ -11,7 +11,7 @@ init: stack.yaml
 stack.yaml:
 	stack init --prefer-nightly
 
-test: build
+test:
 	stack test
 
 
