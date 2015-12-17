@@ -1,0 +1,7 @@
+flags: {}
+packages:
+- '.'
+- '../taygeta'
+- '../text-regex-replace'
+extra-deps: []
+resolver: lts-3.12
