@@ -1,4 +1,3 @@
-
 SRC=$(shell find src -name '*.hs')
 
 CABAL=stack
@@ -12,7 +11,7 @@ stack.yaml:
 	stack init --prefer-nightly
 
 test:
-	stack test
+	stack test --pedantic
 
 
 run: build
@@ -47,7 +46,7 @@ clean:
 distclean: clean
 
 build:
-	stack build
+	stack build --pedantic
 
 watch:
 	ghcid "--command=stack ghci"

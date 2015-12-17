@@ -4,8 +4,6 @@
 module Taygeta.TokenizerSpec where
 
 
-import qualified Data.Text             as T
-
 import           Test.Hspec
 
 import           Taygeta.ICU.Tokenizer
@@ -38,7 +36,7 @@ spec = do
             treebankTokenizer "They'll save and invest more." `shouldBe`
                 ["They", "'ll", "save", "and", "invest", "more", "."]
 
-    describe "regexTokenizer" $ do
+    describe "regexTokenizer" $
         it "should identify everything that matches a regex." $
             let tokenizer = regexTokenizer "\\p{L}[\\p{L}\\p{P}]*\\p{L}"
             in  tokenizer "Good muffins cost $3.88\n\
